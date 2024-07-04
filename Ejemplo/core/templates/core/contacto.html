@@ -1,0 +1,71 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MauriRopa - Contacto</title>
+    <link rel="stylesheet" href="{% static 'inicio.css' %}">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="#"> <img src="{% static '24.png' %}" id="logo" alt="Logo"> </a>
+        <div>
+            <a href="{% url 'inicio' %}">Inicio</a>
+            <a href="{% url 'nosotros' %}">Nosotros</a>
+            <a href="{% url 'contacto' %}">Contacto</a>
+            <a href="{% url 'carro' %}" id="cart"> <img src="{% static '23.png' %}" alt="Carrito de compras"> <span id="cuenta-carrito">0</span> </a>
+            <a href="{% url 'registro' %}"> <img src="{% static '25.png' %}" alt="Usuario"></a>
+        </div>
+        </nav>
+    </header>
+
+
+
+    <h1>¡Contactanos!</h1>
+
+
+    <div class="contenedor-contacto">
+
+        <img src="{% static '7.png' %}" alt="Esta es una imagen" height="220" width="250">
+
+        <div class="txt">
+            <p>
+                Direccion: Avenida los libertadores 793, El monte.
+            </p>
+            <p>
+                Telefono: 9/64218082
+            </p>
+            <p>
+                Correo Electronico: mau.pavez@duocuc.cl
+            </p>
+            <p>
+                Redes sociales: Siguenos en Facebook, Intagram, X @777_mauri
+            </p>
+            <p>
+                <b>¡Estamos aqui para ayudarte en todo lo que necesites!</b>
+            </p>
+        </div>
+
+    </div>
+
+
+    
+
+    <main>
+        <section id="productos-container"></section>
+    </main>
+
+
+
+    <footer>
+        <p>Esta Pagina Web fue creada por el mejor programador del mundo llamado Mauricio Pavez</p>
+    </footer>
+
+
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+{% load static %}
+{% load crispy_forms_tags %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MauriRopa - Login</title>
+
+    <link rel="stylesheet" href="{% static 'inicio.css' %}">
+    <link rel="stylesheet" href="{% static 'vestuario.css' %}">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="#"> <img src="{% static '24.png' %}" id="logo" alt="Logo"> </a>
+        <div>
+            <a href="{% url 'inicio' %}">Inicio</a>
+            <a href="{% url 'nosotros' %}">Nosotros</a>
+            <a href="{% url 'contacto' %}">Contacto</a>
+            <a href="{% url 'carro' %}" id="cart"> <img src="{% static '23.png' %}" alt="Carrito de compras"> <span id="cuenta-carrito">0</span> </a>
+            {% if user.is_authenticated %}
+                {{user.username}}
+                <form action="{% url 'logout' %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit">Salir</button>
+                </form>
+            {% else %}
+                <a href="{% url 'registro' %}"> <img src="{% static '25.png' %}" alt="Usuario"></a>
+            {% endif %}
+        </div>
+        </nav>
+    </header>
+
+
+
+    <h1>Productos</h1>
+
+    <section id="catalogo">
+        {% for planta in plantas %}
+        <div class="planta">
+            <div class="descripcion"></div>
+            <img src="{{ planta.imagen }}" alt="" class="imagen">
+            <div class="cant-precio">
+                <div class="cantidad">
+                    <span>Quedan</span>
+                    <span>{{ planta.stock }}</span>
+                </div>
+                <div class="precio">
+                    <span class="tachado">{{ planta.tachado }}</span>
+                    <span>${{ planta.precio }} <small>({{ planta.dolar|floatformat:2 }} USD)</small></span>
+                </div>
+            </div>
+            <div class="agregar">
+                <a href="{% url 'addtocar' planta.codigo %}">Agregar al carro</a> 
+                <img src="{% static '23.png' %}" alt="">
+            </div>
+        </div>
+        {% endfor %}
+    </section>
+
+
+
+</body>
+</html>

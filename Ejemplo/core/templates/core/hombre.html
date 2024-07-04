@@ -1,0 +1,57 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MauriRopa - Hombre</title>
+    <link rel="stylesheet" href="{% static 'inicio.css' %}">
+    <link rel="stylesheet" href="{% static 'hombre.css' %}">
+    <script src="{% static 'hombre.js' %}" ></script>
+    <script src="{% static 'index.js' %}" defer></script>
+    <script src="{% static 'hombreService.js' %}" defer></script>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="#"> <img src="{% static '24.png' %}" id="logo" alt="Logo"> </a>
+        <div>
+            <a href="{% url 'inicio' %}">Inicio</a>
+            <a href="{% url 'nosotros' %}">Nosotros</a>
+            <a href="{% url 'contacto' %}">Contacto</a>
+            <a href="{% url 'carrito' %}" id="cart"> <img src="{% static '23.png' %}" alt="Carrito de compras"> <span id="cuenta-carrito">0</span> </a>
+            {% if user.is_authenticated %}
+                {{user.username}}
+                <form action="{% url 'logout' %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit">Salir</button>
+                </form>
+            {% else %}
+                <a href="{% url 'registro' %}"> <img src="{% static '25.png' %}" alt="Usuario"></a>
+            {% endif %}
+        </div>
+        </nav>
+    </header>
+
+    <h1>Ropa De Hombre</h1>
+
+
+    {% for mostrar in mostrar %}
+
+    <main>
+        <section id="productos-container"></section>
+    </main>
+
+    {% endfor %}
+
+
+
+
+    <footer>
+        <p>Esta Pagina Web fue creada por el mejor programador del mundo llamado Mauricio Pavez</p>
+    </footer>
+
+</body>
+</html>

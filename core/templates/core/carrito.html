@@ -1,0 +1,55 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MauriRopa - Carrito</title>
+    <link rel="stylesheet" href="{% static 'inicio.css' %}">
+    <link rel="stylesheet" href="{% static 'carrito.css' %}">
+    <script src="{% static 'hombre.js' %}" ></script>
+    <script src="{% static 'cart.js' %}" defer></script>
+    <script src="{% static 'hombreService.js' %}" defer></script>
+</head>
+<body onload="cargarPrecioDolar()">
+
+    <header>
+        <nav>
+            <a href="#"> <img src="{% static '24.png' %}" id="logo" alt="Logo"> </a>
+        <div>
+            <a href="{% url 'inicio' %}">Inicio</a>
+            <a href="{% url 'nosotros' %}">Nosotros</a>
+            <a href="{% url 'contacto' %}">Contacto</a>
+            <a href="{% url 'carrito' %}" id="cart"> <img src="{% static '23.png' %}" alt="Carrito de compras"> <span id="cuenta-carrito">0</span> </a>
+            <a href="{% url 'registro' %}"> <img src="{% static '25.png' %}" alt="Usuario"></a>
+        </div>
+        </nav>
+    </header>
+
+
+
+    <h1>Carrito De Compras</h1>
+
+
+
+    <main>
+        <p id="carrito-vacio">Ups! No hay productos en el carrito. <a href="{% url 'hombre' %}">Agrega algunos</a></p>
+        <section id="productos-container"></section>
+        <section id="totales">
+            <p>Total Unidades: <span id="unidades">0</span></p>
+            <p>Total Precio: $<span id="precio">0</span></p>
+            <button disabled>Comprar</button>
+            <button id="reiniciar">Reiniciar Carrito</button>
+        </section>
+    </main>
+
+
+
+
+    <footer>
+        <p>Esta Pagina Web fue creada por el mejor programador del mundo llamado Mauricio Pavez</p>
+    </footer>
+
+</body>
+</html>

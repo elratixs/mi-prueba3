@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+}
+
+#catalogo{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.planta{
+    max-width: 400px;
+    text-align: center;
+    background-color: var(--color-acento-claro);
+    padding: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    transition: 200ms;
+}
+
+.planta:hover{
+    translate: 0 -10px;
+    box-shadow: 0 10px 5px rgba(0, 0, 0, 0.1);
+}
+
+#catalogo img{
+    width: 10vh;
+    aspect-ratio: 0;
+}
+
+.agregar img{
+    width: 5%;
+    aspect-ratio: 0;
+}
+
+.agregar{
+    background-color: rgb(34, 184, 124);
+    padding: 10px;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+}
+
+table{
+    width: 190%;
+}
+
+thead{
+    background-color: #0C3F37;
+    color: #ffffff;
+    height: 30px;
+    text-align: center;
+}
+
+th{
+    padding: 50px;
+}
+
+td{
+    text-align: center;
+}
+
+h2{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 225px;
+}
+
+.comprar{
+    width: 95%;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 100px;
+}
+
+.comprar > a{
+    line-height: 50px;
+    background-color: #0C3F37;
+    color: #ffffff;
+    width: 200px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.comprar > a:hover{
+    background-color: #CE9864;
+}

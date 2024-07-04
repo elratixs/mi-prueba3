@@ -1,0 +1,103 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MauriRopa - Nosotros</title>
+    <link rel="stylesheet" href="{% static 'inicio.css' %}">
+    <link rel="stylesheet" href="{% static 'nosotros.css' %}">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="#"> <img src="{% static '24.png' %}" id="logo" alt="Logo"> </a>
+        <div>
+            <a href="{% url 'inicio' %}">Inicio</a>
+            <a href="{% url 'nosotros' %}">Nosotros</a>
+            <a href="{% url 'contacto' %}">Contacto</a>
+            <a href="{% url 'carro' %}" id="cart"> <img src="{% static '23.png' %}" alt="Carrito de compras"> <span id="cuenta-carrito">0</span> </a>
+            <a href="{% url 'registro' %}"> <img src="{% static '25.png' %}" alt="Usuario"></a>
+        </div>
+        </nav>
+    </header>
+
+    <h1>¿Quienes Somos?</h1>
+
+    <div class="contenedor">
+
+        <img src="{% static '3.jpg' %}" alt="Esta es una imagen" height="220" width="250">
+
+        <div class="txt">
+            <p>
+                En <b> Mundo MauriRopa</b>, somos mas que una marca de ropa; somos una expresion de estilo, calidad y compromiso. Desde nuestra fundacion, nos dedicamos a ofrecer prendas de moda que reflejan la esencia unica de cada individuo.
+            </p>
+        </div>
+
+    </div>
+
+
+    <h1>
+        Nuestra Mision:
+    </h1>
+
+    <div class="contenedor">
+
+        <img src="{% static '4.webp' %}" alt="Esta es una imagen" height="220" width="250">
+
+        <div class="txt">
+            <p>
+                En <b> Mundo MauriRopa</b>, nos esforzamos por inspirar confianza y autenticidad a traves de nuestras colecciones de moda. Nos comprometemos a ofrecer diseños innovadores, calidad excepcional y practicas sostenibles.
+            </p>
+        </div>
+
+    </div>
+
+
+    <h1>
+        Nuestros valores
+    </h1>
+
+
+    <div class="contenedor">
+
+        <img src="{% static '5.webp' %}" alt="Esta es una imagen" height="220" width="250">
+
+        <div class="txt">
+            <p>
+                Calidad: Nos comprometemos a ofrecer productos de alta calidad, desde la seleccion de materiales hasta la atencion al detalle en cada prenda.
+            </p>
+            <p>
+                Creatividad: Nos apasiona la creatividad y la innovacion en cada diseño, manteniendo una estetica distintiva que nos diferencia en el mercado.
+            </p>
+            <p>
+                Responsabilidad: Nos preocupamos por el bienestar social y ambiental, trabajando con proveedores eticos y practicando la sostenibilidad en todo nuestro proceso de produccion.
+            </p>
+        </div>
+
+    </div>
+
+
+    <h1>
+        Unete a nosotros
+    </h1>
+
+
+    <div class="contenedor">
+
+        <img src="{% static '6.avif' %}" alt="Esta es una imagen" height="220" width="250">
+
+        <div class="txt">
+            <p>
+                Gracias por ser parte de nuestra comunidad en <b> Mundo MauriRopa</b>. Te invitamos a descubrir nuestra coleccion y a ser parte de nuestra historia en la moda consciente y autentica.
+            </p>
+        </div>
+
+    </div>
+
+
+
+</body>
+</html>
